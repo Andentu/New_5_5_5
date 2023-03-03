@@ -6,9 +6,15 @@
         {
             Console.WriteLine("Введите число для рассчета факториала (до 27 включительно): ");
             var num = decimal.Parse(Console.ReadLine());
-            var num2 = num;
-            Factorial(num);
-            Console.WriteLine("Факториал числа {0}: {1}", num2,Factorial(num));
+            
+            for (int i = 0; i <= num; i++)
+            {
+            var num2 = i;
+            Factorial(i);
+            Console.WriteLine("Факториал числа {0}: {1}", num2, Factorial(i));
+
+            }
+            
             Console.ReadKey();
         }
         static decimal Factorial(decimal x)
